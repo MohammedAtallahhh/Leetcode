@@ -19,10 +19,15 @@
 * where n is the size of the input array.
 */
 
-int* twoSum(vector<int> arr, int target) {
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
+
+vector<int> twoSum1(vector<int> arr, int target) {
     int left = 0;
     int right = arr.size() - 1;
-    static int res[2];
     
     for (int i = 0; i < arr.size() - 1; i++) {
         if (arr[left] + arr[right] > target)
@@ -32,12 +37,11 @@ int* twoSum(vector<int> arr, int target) {
             left++;
             
         else {
-            res[0] = left;
-            res[1] = right;
+            return {left, right};
         }
     }
     
-    return res;
+    return {};
 }
 
 /*
@@ -52,7 +56,7 @@ int* twoSum(vector<int> arr, int target) {
 * If a complement is found, it returns the indices of the two numbers. The time complexity is O(n) because both passes iterate through the array once.
 */
 
-vector<int> twoSum(vector<int>& nums, int target) {
+vector<int> twoSum2(vector<int>& nums, int target) {
     unordered_map<int, int> numMap;
     int n = nums.size();
 
@@ -86,7 +90,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
 * If a complement is found, it returns the indices of the two numbers. The time complexity is O(n) because it only requires a single pass through the array.
 */
 
-vector<int> twoSum(vector<int>& nums, int target) {
+vector<int> twoSum3(vector<int>& nums, int target) {
     unordered_map<int, int> numMap;
     int n = nums.size();
 
@@ -99,4 +103,20 @@ vector<int> twoSum(vector<int>& nums, int target) {
     }
 
     return {}; // No solution found
+}
+
+int main() {
+
+    vector<int> nums = {2, 7, 11, 13};
+    int target = 9;
+
+    vector<int> sum1 = twoSum1(nums, target);
+    cout << sum1[0] << " " << sum1[1] << endl;
+
+    vector<int> sum2 = twoSum2(nums, target);
+    cout << sum2[0] << " " << sum2[1] << endl;
+
+    vector<int> sum3 = twoSum3(nums, target);
+    cout << sum3[0] << " " << sum3[1] << endl;
+
 }

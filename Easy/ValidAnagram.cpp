@@ -15,7 +15,6 @@
 
 */
 
-
 bool isAnagram(string s, string t) {
     if(s.length() != t.length()){
         return false;
@@ -39,7 +38,6 @@ bool isAnagram(string s, string t) {
     Solved using String + Hash Table.
 
 */
-
 
 bool isAnagram(string s, string t) {
     if(s.length() != t.length()){
