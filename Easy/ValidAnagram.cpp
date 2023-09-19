@@ -4,6 +4,10 @@
     An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 */
 
+#include <bits/stdc++.h>
+
+using namespace std;
+
 /*
 
     Time Complexity : O(NlogN + MlogM), Sorting the String(s and t) costs O(NlogN + MlogM). Where N is the size

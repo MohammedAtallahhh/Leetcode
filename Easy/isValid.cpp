@@ -8,8 +8,7 @@
     - Every close bracket has a corresponding open bracket of the same type.
 */
 
-#include <iostream>
-#include <stack>
+#include <bits/stdc++.h>
 
 using namespace std;
 

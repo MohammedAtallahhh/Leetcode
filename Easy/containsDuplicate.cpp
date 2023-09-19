@@ -1,13 +1,13 @@
-#include <iostream>
-#include <vector>
-
-using namespace std;
 
 /*
 * Given an integer array nums 
 * return true if any value appears at least twice in the array
 * and return false if every element is distinct.
 */
+
+#include <bits/stdc++.h>
+
+using namespace std;
 
 /* 
 * Approach 1: Brute Force

@@ -7,6 +7,10 @@
 * You can return the answer in any order.
 */
 
+#include <bits/stdc++.h>
+
+using namespace std;
+
 /*
 * Approach 1: Two-pointer technique
 *
@@ -19,11 +23,6 @@
 * where n is the size of the input array.
 */
 
-#include <iostream>
-#include <vector>
-#include <unordered_map>
-
-using namespace std;
 
 vector<int> twoSum1(vector<int> arr, int target) {
     int left = 0;
